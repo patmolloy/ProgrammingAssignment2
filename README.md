@@ -107,37 +107,38 @@ This assignment will be graded via peer assessment.
 ----------------------------------------------------
 ### Example Output
 
-create the original matrix (here called amatrix) by calling makeCacheMatrix
+Create the original matrix (here called amatrix) by calling makeCacheMatrix
 
-> amatrix <-  makeCacheMatrix(matrix(c(1,2,3,4), nrow=2, ncol=2))
-> amatrix$get()
-     [,1] [,2]
-[1,]    1    3
-[2,]    2    4
+    > amatrix <-  makeCacheMatrix(matrix(c(1,2,3,4), nrow=2, ncol=2))
+    > amatrix$get()
+         [,1] [,2]
+    [1,]    1    3
+    [2,]    2    4
 
-run cacheSolve on amatrix. Since the inverse is *not* in the cache, it has to be calculated
+Run cacheSolve on amatrix. Since the inverse is *not* in the cache, it has to be calculated
 
-> cacheSolve(amatrix)
-     [,1] [,2]
-[1,]   -2  1.5
-[2,]    1 -0.5
+    > cacheSolve(amatrix)
+         [,1] [,2]
+    [1,]   -2  1.5
+    [2,]    1 -0.5
 
-running again, however, and the data *is* now cached, and is therefore *not* calculated again, just displayed
-> cacheSolve(amatrix)
-Loading previously cached data
-     [,1] [,2]
-[1,]   -2  1.5
-[2,]    1 -0.5
+Running again, however, and the data *is* now cached, and is therefore *not* calculated again, just displayed
+
+    > cacheSolve(amatrix)
+    Loading previously cached data
+         [,1] [,2]
+    [1,]   -2  1.5
+    [2,]    1 -0.5
 
 Change amatrix, and cacheSolve once again has to calculate the result
 
-> amatrix = makeCacheMatrix(matrix(c(5,6,7,8), nrow=2, ncol=2))
-> amatrix$get()
-     [,1] [,2]
-[1,]    5    7
-[2,]    6    8
-> cacheSolve(amatrix)
-     [,1] [,2]
-[1,]   -4  3.5
-[2,]    3 -2.5
-> 
+    > amatrix = makeCacheMatrix(matrix(c(5,6,7,8), nrow=2, ncol=2))
+    > amatrix$get()
+         [,1] [,2]
+    [1,]    5    7
+    [2,]    6    8
+    > cacheSolve(amatrix)
+         [,1] [,2]
+    [1,]   -4  3.5
+    [2,]    3 -2.5
+    > 
