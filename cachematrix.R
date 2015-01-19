@@ -1,5 +1,4 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Put comments here that give an overall description of what your functions do
 
 ## The makeCacheMatrix function is modelled on the makeVector function in the assignment
 ## It creates a special "matrix" object that can cache its inverse (the solve function)
