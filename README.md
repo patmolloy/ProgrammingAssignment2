@@ -105,9 +105,9 @@ In order to complete this assignment, you must do the following:
 This assignment will be graded via peer assessment.
 
 ----------------------------------------------------
-Example Output
+### Example Output
 
-create the original matrix (here called a matrix) by calling makeCacheMatrix
+create the original matrix (here called amatrix) by calling makeCacheMatrix
 
 > amatrix <-  makeCacheMatrix(matrix(c(1,2,3,4), nrow=2, ncol=2))
 > amatrix$get()
